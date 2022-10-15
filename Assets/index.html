@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <!-- font-awesome stylesheet -->
+    <script src="https://kit.fontawesome.com/676eb33ce4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <nav class="navigation-bar">
+      <div class="title-combo">
+        <div class="logo">
+          <img src="Assets/music_player_logo.png" alt="Music_Player_Logo">
+        </div>
+        <div class="player-name">
+          <h4 style="color: black;">Music Player</h4>
+        </div>
+      </div>
+      <div class="favorites">
+        <i class="fa-solid fa-heart"></i>
+        <span>Favorites</span>
+      </div>
+      <div class="search-bar">
+        <div class="search-lens">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <input type="text" name="search_bar" placeholder="Search">
+        <div class="search-mic">
+          <i class="fa-solid fa-microphone"></i>
+        </div>
+      </div>
+      <div class="notification">
+        <i class="fa-sharp fa-solid fa-bell"></i>
+        <span>Notifications</span>
+      </div>
+      <div class="user-profile">
+        <img src="Assets/user_img.png" alt="user_img">
+      </div>
+    </nav>
+
+    <hr>
+
+    <main>
+      <aside class="aside section-1">
+
+        <div class="carousel-outer">
+          <div class="carousel">
+            <img src="Assets\songs_poster\abhi_muzme_kahin.jpg" alt="filhal_poster">
+            <img src="Assets\songs_poster\filhal.jpg" alt="filhal_poster">
+            <img src="Assets\songs_poster\kesariya.jpg" alt="filhal_poster">
+          </div>
+        </div>
+
+        <div class="latest-release">
+
+          <h2 style="margin-bottom: 12px; padding-left: 50px;">Latest Release</h2>
+
+          <div class="latest-release-content">
+            <!-- song card -->
+            <div class="card">
+              <div class="song-img">
+                <img src="Assets\songs_poster\filhal.jpg" alt="song-img">
+                <!-- play button, which will be shown on hover on the card image -->
+                <div class="play-button">
+                  <i class="fas fa-play" style="width:100%; height:100%; display:inline-block"></i>
+                </div>
+              </div>
+              <div class="song-description">
+                <p>Filhal</p>
+                <p>Mar, 2020</p>
+              </div>
+
+              <div class="options">
+                <label for="latest-release-checkbox"><i class="fa-solid fa-ellipsis"></i></label>
+                <input type="checkbox" name="" value="" id="latest-release-checkbox">
+                <div class="latest-release-dropdown">
+                  <div class="drop-item">
+                      <!-- if user clicks on play now button, he/she will be taken to the single playlist page -->
+                      <p><i class="fas fa-play-circle"></i> <a href="playList.html">
+                        Play Now</a></p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-list-ul"></i> Add to Queue</p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-music"></i> Add to playlist</p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-info-circle"></i> Get Info</p>
+                  </div>
+                </div>
+                <p>
+                  4:12
+                </p>
+              </div>
+            </div>
+
+            <!-- song card -->
+            <div class="card">
+              <div class="song-img">
+                <img src="Assets\songs_poster\filhal.jpg" alt="song-img">
+                <!-- play button, which will be shown on hover on the card image -->
+                <div class="play-button">
+                  <i class="fas fa-play" style="width:100%; height:100%; display:inline-block"></i>
+                </div>
+              </div>
+              <div class="song-description">
+                <p>Filhal</p>
+                <p>Mar, 2020</p>
+              </div>
+
+              <div class="options">
+                <label for="latest-release-checkbox-2"><i class="fa-solid fa-ellipsis"></i></label>
+                <input type="checkbox" name="" value="" id="latest-release-checkbox-2">
+                <div class="latest-release-dropdown">
+                  <div class="drop-item">
+                      <!-- if user clicks on play now button, he/she will be taken to the single playlist page -->
+                      <p><i class="fas fa-play-circle"></i> <a href="playList.html">
+                        Play Now</a></p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-list-ul"></i> Add to Queue</p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-music"></i> Add to playlist</p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-info-circle"></i> Get Info</p>
+                  </div>
+                </div>
+                <p>
+                  4:12
+                </p>
+              </div>
+            </div>
+
+            <!-- song card -->
+            <div class="card">
+              <div class="song-img">
+                <img src="Assets\songs_poster\filhal.jpg" alt="song-img">
+                <!-- play button, which will be shown on hover on the card image -->
+                <div class="play-button">
+                  <i class="fas fa-play" style="width:100%; height:100%; display:inline-block"></i>
+                </div>
+              </div>
+              <div class="song-description">
+                <p>Filhal</p>
+                <p>Mar, 2020</p>
+              </div>
+
+              <div class="options">
+                <label for="latest-release-checkbox-3"><i class="fa-solid fa-ellipsis"></i></label>
+                <input type="checkbox" name="" value="" id="latest-release-checkbox-3">
+                <div class="latest-release-dropdown">
+                  <div class="drop-item">
+                      <!-- if user clicks on play now button, he/she will be taken to the single playlist page -->
+                      <p><i class="fas fa-play-circle"></i> <a href="playList.html">
+                        Play Now</a></p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-list-ul"></i> Add to Queue</p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-music"></i> Add to playlist</p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-info-circle"></i> Get Info</p>
+                  </div>
+                </div>
+                <p>
+                  4:12
+                </p>
+              </div>
+            </div>
+
+            <!-- song card -->
+            <div class="card">
+              <div class="song-img">
+                <img src="Assets\songs_poster\filhal.jpg" alt="song-img">
+                <!-- play button, which will be shown on hover on the card image -->
+                <div class="play-button">
+                  <i class="fas fa-play" style="width:100%; height:100%; display:inline-block"></i>
+                </div>
+              </div>
+              <div class="song-description">
+                <p>Filhal</p>
+                <p>Mar, 2020</p>
+              </div>
+              <div class="options">
+                <label for="latest-release-checkbox-4"><i class="fa-solid fa-ellipsis"></i></label>
+                <input type="checkbox" name="" value="" id="latest-release-checkbox-4">
+                <div class="latest-release-dropdown">
+                  <div class="drop-item">
+                      <!-- if user clicks on play now button, he/she will be taken to the single playlist page -->
+                      <p><i class="fas fa-play-circle"></i> <a href="playList.html">
+                        Play Now</a></p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-list-ul"></i> Add to Queue</p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-music"></i> Add to playlist</p>
+                  </div>
+                  <div class="drop-item">
+                      <p><i class="fas fa-info-circle"></i> Get Info</p>
+                  </div>
+                </div>
+                <p>
+                  4:12
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="popular-artists">
+          <!-- this is the heading of popular artists section -->
+            <h2 style="margin-bottom: 12px; padding-left: 50px;">Popular Artists</h2>
+            <!-- this contains the content of the popular artists section -->
+            <div class="popular-artist-content">
+              <!-- if user clicks on any one artist, it will redirect the user to the second page -->
+              <!-- following is the list of artists -->
+              <!-- first artist -->
+              <a href="playlist.html">
+                  <div>
+                      <img src="Assets\artist_images\arijit_singh.jpg" alt="artist_image">
+                      <div><i class="fas fa-play"></i></div>
+                      <p>
+                          Arijit Singh
+                      </p>
+                  </div>
+              </a>
+
+              <!-- Second artist -->
+              <a href="playlist.html">
+                  <div>
+                      <img src="Assets\artist_images\arijit_singh.jpg" alt="artist_image">
+                      <div><i class="fas fa-play"></i></div>
+                      <p>
+                          Arijit Singh
+                      </p>
+                  </div>
+              </a>
+
+              <!-- Third artist -->
+              <a href="playlist.html">
+                  <div>
+                      <img src="Assets\artist_images\arijit_singh.jpg" alt="artist_image">
+                      <div><i class="fas fa-play"></i></div>
+                      <p>
+                          Arijit Singh
+                      </p>
+                  </div>
+              </a>
+
+              <!-- Forth artist -->
+              <a href="playlist.html">
+                  <div>
+                      <img src="Assets\artist_images\arijit_singh.jpg" alt="artist_image">
+                      <div><i class="fas fa-play"></i></div>
+                      <p>
+                          Arijit Singh
+                      </p>
+                  </div>
+              </a>
+
+              <!-- Fifth artist -->
+              <a href="playlist.html">
+                  <div>
+                      <img src="Assets\artist_images\arijit_singh.jpg" alt="artist_image">
+                      <div><i class="fas fa-play"></i></div>
+                      <p>
+                          Arijit Singh
+                      </p>
+                  </div>
+              </a>
+
+              <!-- Sixth artist -->
+              <a href="playlist.html">
+                  <div>
+                      <img src="Assets\artist_images\arijit_singh.jpg" alt="artist_image">
+                      <div><i class="fas fa-play"></i></div>
+                      <p>
+                          Arijit Singh
+                      </p>
+                  </div>
+              </a>
+
+              <!-- Seventh artist -->
+              <!-- <a href="playlist.html">
+                  <div>
+                      <img src="Assets\artist_images\arijit_singh.jpg" alt="artist_image">
+                      <div><i class="fas fa-play"></i></div>
+                      <p>
+                          Arijit Singh
+                      </p>
+                  </div>
+              </a> -->
+
+              <!-- Eighth artist -->
+              <!-- <a href="playlist.html">
+                  <div>
+                      <img src="Assets\artist_images\arijit_singh.jpg" alt="artist_image">
+                      <div><i class="fas fa-play"></i></div>
+                      <p>
+                          Arijit Singh
+                      </p>
+                  </div>
+              </a> -->
+          </div>
+        </div>
+
+        <div class="music-themes">
+            <div class="outer-div">
+                <div class="inner-div">
+                    <span>Party</span>
+                </div>
+            </div>
+            <div class="outer-div">
+                <div class="inner-div">
+                    <span>Gym</span>
+                </div>
+            </div>
+            <div class="outer-div">
+                <div class="inner-div">
+                    <span>Travel</span>
+                </div>
+            </div>
+            <div class="outer-div">
+                <div class="inner-div">
+                    <span>Meditation</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- this is the hindi section -->
+        <div class="language hindi">
+          <!-- hindi section heading -->
+          <h2 style="margin-bottom: 12px; padding-left: 50px;">Latest Hindi</h2>
+          <!-- hindi section contents -->
+          <div class="language-content">
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+        </div>
+
+        <!-- this is the marathi section -->
+        <div class="language marathi">
+          <!-- marathi section heading -->
+          <h2 style="margin-bottom: 12px; padding-left: 50px;">Latest Marathi</h2>
+          <!-- marathi section contents -->
+          <div class="language-content">
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+            <div>
+                <img src="Assets\latest_hindi\songs_poster\ashiqui_2.jpg">
+                <div><i class="fas fa-play"></i></div>
+                <p class="lang-p1">Baarish</p>
+                <p class="lang-p2">Aug 11, 2017</p>
+            </div>
+      </aside>
+<!-- one aside section is complete -->
+
+
+      <!-- now the second aside section will start from here -->
+      <!-- the page is responsive. please try reducing the width of the page -->
+      <!-- the aside section will collapse and a "more button will be shown to you." -->
+      <!-- clicking on this more button, you will be shown the aside section 2  -->
+      <!-- its position will be absolute at lower resolutions -->
+      <!-- this is the label for that more button -->
+      <label for="more"><i class="fa-solid fa-circle-chevron-down"></i></label>
+      <!-- this is that more button -->
+      <!-- and this is the check box. this will always be hidden -->
+      <!-- check the style.css when the label is clicked, this checkbox will be checked -->
+      <!-- which will invoke the aside section 2 on lower resolutions -->
+      <input type="checkbox" id="more">
+
+
+<!-- Second Aside section starts       -->
+      <aside class="aside section-2">
+        <!-- this is the section heading part. the heading will be static -->
+        <div class="heading">
+            <h1>Playlist</h1>
+        </div>
+        <!-- this is the content of the play  list. it will be dynamic. -->
+        <div class="playlist-content">
+            <!-- first playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        01
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- second playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        02
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- third playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        03
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- forth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        04
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- fifth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        05
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- Sixth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        06
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- seventh playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        07
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- eight playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        08
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- nineth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        09
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- tenth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin:4px ;">
+                        10
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="Assets\songs_poster\kesariya.jpg">
+                        <div class="play-button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div>
+                            Kesariya
+                        </div>
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+          </div>
+      </aside>
+    </main>
+<!-- main part of the page is over. -->
+
+    <!-- this is the footer part. -->
+    <!-- its position will be fixed to the screen bottom. -->
+    <footer>
+      <!-- active song description part of footer -->
+      <div class="active-song-description">
+        <!-- song image -->
+        <div id="song-image">
+            <img src="Assets\songs_poster\filhal.jpg">
+        </div>
+        <!-- song name and author -->
+        <div class="song-desc">
+            <div>
+                Filhal
+            </div>
+            <div>
+                Arijit Singh
+            </div>
+        </div>
+        <!-- heart icon and dislike icon -->
+        <div class="heart-and-dislike-icon">
+            <span>
+                <i class="far fa-heart"></i>
+            </span>
+            <span>
+                <i class="fa-solid fa-thumbs-down"></i>
+            </span>
+        </div>
+      </div>
+      <!-- these are the main player controls -->
+      <div class="player">
+          <div class="controls">
+              <div><i class="fas fa-random"></i></div>
+              <div><i class="fas fa-step-backward"></i></div>
+              <div><i class="fas fa-pause-circle"></i></div>
+              <div><i class="fas fa-step-forward"></i></div>
+              <div><i class="fas fa-redo"></i></div>
+          </div>
+          <!-- this is the slider -->
+          <div id="slider">
+              <!-- current time -->
+              <div class="time">
+                  0.15
+              </div>
+              <div class="slidecontainer">
+                  <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+              </div>
+              <!-- total time -->
+              <div class="time">
+                  3.56
+              </div>
+          </div>
+      </div>
+      <!-- other icons including the volume slider and all -->
+      <div class="extras">
+          <div>
+              <i class="fas fa-list-ul"></i>
+          </div>
+          <div>
+              <i class="fas fa-volume-up"></i>
+          </div>
+          <div class="slidecontainer" style="width:30%;">
+              <input type="range" min="0" max="100" value="0" class="slider" id="myRange" style="margin-top:0px;">
+          </div>
+          <div>
+              <i class="fas fa-expand-alt"></i>
+          </div>
+      </div>
+    </footer>
+  </body>
+</html>
