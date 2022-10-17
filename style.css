@@ -33,7 +33,7 @@ p {
 /* top navigation bar */
 /* ______________________________________________________________________ */
 .navigation-bar{
-  height: auto;
+  height: 60px;
 	width: auto;
   display: flex;
   flex-direction: row;
@@ -125,7 +125,12 @@ p {
 /* navigation bar is completed here */
 
 /* ________________________________________________________ */
-
+main{
+  width: 100%;
+  height: calc(100vh - 140px);
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
 /* ______________________________________________________________________ */
 .aside{
   display: inline-block;
@@ -137,7 +142,7 @@ p {
 }
 .section-1{
   width: 70%;
-  height: 85vh;
+  height: 100%;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -147,7 +152,7 @@ p {
 }
 .section-2{
   width: 25%;
-  height: 90vh;
+  height: 100%;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -458,13 +463,17 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 	position: relative;
 	/* top: 20vw; */
 	height: auto;
-	width: 100%;
+	width: 96%;
+  margin-right: 2%;
+  margin-left: 2%;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
 	align-items: center;
+  overflow-x: scroll;
+}
+.music-themes::-webkit-scrollbar {
+  display: none;
 }
 /* this outer div contains the inner div and the image and text */
 .outer-div {
@@ -535,6 +544,7 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 }
 .lang{
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .hindi{
 
@@ -782,11 +792,11 @@ label[for="more"]:checked ~ input {
 /* this is the container for the whole footer */
 footer {
 	position: absolute;
-	bottom: 0px;
+	bottom: 0;
+  left: 0;
 	width: 100%;
 	height: 60px;
 	background-color: var(--dark-color, #0f52ba);
-  /* background-color: orange; */
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
