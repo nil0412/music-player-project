@@ -1,15 +1,11 @@
+root{
+  --background-color: #dbf3fa;
+  --dark-color: #0f52ba;
+  /* var(--dark-color, #0f52ba); */
+}
 body{
-  /* background-image: url("Assets\\background_img.jpg");
-  background-size: auto; */
-  /* background-image: linear-gradient(to right, #1b043b, #06022e); */
-  /* background-image: linear-gradient(90deg,
-		#833ab4,
-		#fd1d1d,
-		#fcb045); */
-  /* background-image: linear-gradient(to right, orange, red); */
-  /* background-color: #00ff55; */
-  background-color:  #00b8e6;
-  /* color: white; */
+  /* background-color:  #00b8e6; */
+  background-color: var(--background-color, #dbf3fa);
   color: black;
   margin: 0px;
 	font-family: "Segoe UI", Arial, sans-serif;
@@ -31,8 +27,10 @@ h5,
 h6,
 p {
 	margin: 0px;
+  /* color: black; */
 }
 
+/* top navigation bar */
 /* ______________________________________________________________________ */
 .navigation-bar{
   height: auto;
@@ -45,9 +43,9 @@ p {
   box-sizing: border-box;
   height: auto;
   width: auto;
-  padding: 10px 5%;
+  padding: 10px 10px;
   transition: all ease-in-out 1s;
-  background-color: #002933;
+  background-color: var(--dark-color, #0f52ba);
   color: white;
   border-bottom: 1px solid white;
 }
@@ -124,6 +122,9 @@ p {
   line-height: 100%;
   vertical-align: middle;
 }
+/* navigation bar is completed here */
+
+/* ________________________________________________________ */
 
 /* ______________________________________________________________________ */
 .aside{
@@ -154,21 +155,24 @@ p {
 /* ______________________________________________________________________ */
 .carousel-outer {
 	position: relative;
-	margin-top: 1%;
-  width: 100%;
+	margin: 10px;
+  overflow: hidden;
+  height: 15vw;
+  min-height: 120px;
 	transition: all ease-in-out 1s;
 }
 .carousel {
 	position: absolute;
 	left: 10%;
   right: 10%;
+  top: 10%;
+  bottom: 10%;
 	width: 70%;
 	height: auto;
 	display: flex;
 	flex-direction: row;
 	overflow: visible;
 	justify-content: space-around;
-  margin: 5px;
 }
 .carousel img{
   width: 21vw;
@@ -179,7 +183,6 @@ p {
 }
 .carousel img:nth-child(1) {
 	position: relative;
-	/* left: 2vw; */
 	z-index: 2;
 }
 /* image which is in the maddle of the carousel */
@@ -190,7 +193,6 @@ p {
 /* if you see it direction wise, then it is the first image in the carousel */
 .carousel img:nth-child(3) {
 	position: relative;
-	/* right: 2vw; */
 	z-index: 1;
 }
 
@@ -211,63 +213,81 @@ p {
 
 .latest-release {
 	position: relative;
-	top: 15vw;
+  /* margin-top: 10px; */
+	/* top: 15vw; */
 	height: auto;
 	width: 100%;
 	box-sizing: border-box;
 }
 /* container of the latest release part should be of type flex */
 .latest-release-content {
+  height: 30vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
-/* all the components of the latest release part */
-.latest-release-content > div {
-	/*  border:1px solid white; */
-	height: 100px;
-	width: 40%;
-  min-width: 300px;
-	margin: 5px 0px;
+.latest-release-content::-webkit-scrollbar{
+  display: none;
 }
+/* all the components of the latest release part */
 /* card is the general class for the components of the latest release part */
 .card {
+  height: 100px;
+	width: 40%;
+  min-width: 300px;
+	margin: 5px 10px;
 	display: flex;
 	flex-direction: row;
 	transition: box-shadow ease-in-out 0.1s;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
   /* position: relative; */
 }
 /* hovering effects for the latest release part components */
 .card:hover {
-  border: 2px solid white;
-	box-shadow: 0px 0px 2px 1px white;
+  background-color: var(--dark-color, #0f52ba);
+  color: white;
 }
 /* images in the cards of the latest release section */
 .card img {
 	width: 100px;
 	height: 100px;
 	z-index: 1;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 /* this is the play button which will be visible only on hover */
-.play-button {
+.card .play-button {
 	width: 100%;
 	height: 100%;
 	position: relative;
 	top: -105%;
-	color: rgba(255, 255, 255, 0);
 	/* note that its opacity will be 0 normally */
+	color: rgba(255, 255, 255, 0);
 	background-color: rgba(0, 0, 0, 0);
 	text-align: center;
 	z-index: 5;
 	transition: all ease-in-out 0.1s;
+  border-radius: 10px;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
 }
 /* actual play icon from font awesome */
-.play-button i {
-	padding-top: 45%;
+.card .play-button i {
+  /* position: absolute;
+  top: 10%;
+  bottom: 10%; */
+  padding-top: 45%;
 }
 /* hovering effect for the play button */
-.play-button:hover {
+.card .play-button:hover {
 	color: rgba(255, 255, 255, 0.9);
 	background-color: rgba(0, 0, 0, 0.5);
 }
@@ -304,7 +324,7 @@ input[type="checkbox"] {
 /* this is for the latest release drop down menu */
 .latest-release-dropdown {
 	position: absolute;
-	background-color: #002933;
+	background-color: var(--dark-color, #0f52ba);
   color: White;
 	display: flex;
 	flex-direction: column;
@@ -345,14 +365,16 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 }
 
 /* __________________________________________________________________________ */
+/* __________________________________________________________________________ */
 /* popular artists */
 .popular-artists {
   position: relative;
-	top: 18vw;
+	/* top: 18vw; */
+  margin-top: 10px;
 	height: auto;
-	width: 100%;
 	box-sizing: border-box;
-}/* content of the container in popular artists section */
+}
+/* content of the container in popular artists section */
 .popular-artists > div {
 	margin: 5px;
 	text-align: center;
@@ -361,73 +383,80 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 .popular-artist-content {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+  overflow-x: scroll;
+}
+.popular-artist-content::-webkit-scrollbar{
+  display: none;
 }
 
 .popular-artist-content > a{
   color: white;
 	margin: 5px 0px;
+  padding: 0px 10px;
 }
-/* images in the popular artists section */
-.popular-artist-content a img {
-	width: 10vw;
-	min-width: 60px;
-	min-height: 60px;
-	height: 10vw;
-	border-radius: 50%;
-}
-
-.popular-artist-content > a > div {
-	position: relative;
+.artist-card {
+  position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 }
+/* images in the popular artists section */
+.artist-card img{
+  width: 10vw;
+	min-width: 100px;
+	min-height: 100px;
+	height: 10vw;
+	border-radius: 50%;
+  border: 2px solid white;
+}
 /* this section is for play button which is not visible until hover on artist image */
-.popular-artist-content > a > div > div {
+.artist-card .play-button {
   display: flex;
   position: absolute;
   top: 0;
-	width: 10vw;
-	min-width: 60px;
-	min-height: 60px;
-	height: 10vw;
-	border-radius: 50%;
-	background-color: rgb(0, 0, 0);
-	opacity: 0;
-	transition: opacity ease-in-out 0.1s;
+  left: 0;
+  width: 10vw;
+  min-width: 100px;
+  height: 10vw;
+  min-height: 100px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity ease-in-out 0.1s;
   border: 2px solid white;
-  box-shadow: 0px 0px 2px 1px white;
+  /* box-shadow: 0px 0px 2px 1px white; */
 }
-/* additional icons in this section */
-.popular-artist-content a div div i {
-	margin: auto;
+.artist-card .play-button i{
+  margin: auto;
 	font-size: 3vw;
 	opacity: 0;
 	transition: opacity ease-in-out 0.2s;
 }
-/* added hovering effects - play button will be visble when hovered on artist image */
-.popular-artist-content a div div:hover {
+.ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.artist-name{
+  width: 10vw;
+	min-width: 100px;
+  color: black;
+}
+.artist-card .play-button:hover {
 	opacity: 0.6;
 }
-.popular-artist-content a div div:hover i {
+.artist-card .play-button:hover i{
 	opacity: 1;
-}
-/* text portion in popular artists section */
-.popular-artists div p {
-	text-align: center;
-  color: black;
-  font-weight: 500;
 }
 
 
 /* ______________________________________________________________________ */
+/* ______________________________________________________________________ */
 /* music themes*/
 .music-themes {
 	position: relative;
-	top: 20vw;
+	/* top: 20vw; */
 	height: auto;
 	width: 100%;
 	box-sizing: border-box;
@@ -498,58 +527,59 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 /* language sections */
 .language {
 	position: relative;
-	top: 18vw;
+  margin-top: 10px;
+	/* top: 18vw; */
 	height: auto;
 	width: 100%;
 	box-sizing: border-box;
-	margin: 5vw 0px;
+}
+.lang{
+  margin-top: 10px;
 }
 .hindi{
-  /* top: 18vw; */
-  /* height: auto;
-  margin-bottom: 5px; */
+
 }
-.marathi{
-  /* top: 18vw; */
-  /* margin-top: 5px; */
+.english{
+
 }
 /* language content container */
 .language-content {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
 	align-items: baseline;
-	flex-wrap: wrap;
-	/* padding: 2vw; */
+  height: auto;
+  overflow-x: scroll;
+}
+.language-content::-webkit-scrollbar{
+  display: none;
+}
+/* items in language content */
+.lang-card {
+  position: relative;
+  width: auto;
+	min-width: 100px;
+	height: auto;
+	margin: 0vw 2vw;
 }
 /* image in language content */
 .language-content div img {
 	width: 10vw;
-	min-width: 60px;
+	min-width: 100px;
 	height: 10vw;
-	min-height: 60px;
-	transition: box-shadow ease-in-out 0.1s;
-}
-/* hovering effects on language content items */
-.language-content div img:hover {
-	box-shadow: 0px 0px 10px 1px white;
-}
-/* items in language content */
-.language-content > div {
-  position: relative;
-	margin: 2vw 0vw;
-	/* width: 10vw; */
-	min-width: 60px;
-  /* height: 10vw; */
-  /* min-height: 60px; */
+	min-height: 100px;
+	/* transition: box-shadow ease-in-out 0.1s; */
+  border: 2px solid white;
+  border-radius: 10px;
 }
 .lang-description{
-  height: auto;
+  width: 10vw;
+	min-width: 100px;
 }
 /* properties for release date and name of the song */
 .lang-p1 {
-	width: 100%;
-	word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .lang-p2 {
 	font-size: 12px;
@@ -561,21 +591,19 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
   display: flex;
   position: absolute;
   top: 0;
-	width: 10vw;
-	min-width: 60px;
+  left: 0;
+  width: 10vw;
+  min-width: 100px;
   height: 10vw;
-	min-height: 60px;
-	background-color: rgb(0, 0, 0);
-	opacity: 0;
-	transition: opacity ease-in-out 0.1s;
+  min-height: 100px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity ease-in-out 0.1s;
   border: 2px solid white;
-  box-shadow: 0px 0px 2px 1px white;
 }
 /* .language-content > div > div > i{ */
 .lang-hover i{
-  /* padding-top: 40%;
-  padding-left: 40%; */
-  /* font-size: 2rem; */
   color: white;
   margin: auto;
 	font-size: 3vw;
@@ -594,12 +622,11 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 /* .language-content div p { */
 .lang-description p{
 	text-align: center;
-  margin-bottom: 1px
+  font-weight: bold;
 }
 
 /* _______________________________________________________________ */
 /* _______________________________________________________________ */
-/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* section 2 starts here */
 /* more button */
 label[for="more"] {
@@ -623,14 +650,13 @@ label[for="more"]:checked ~ input {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: baseline;
-	margin-bottom: 12%;
+	margin-bottom: 10px;
 }
 
 /* playlist content */
 .playlist-content {
 	width: 100%;
-	height: 78vh;
-	/*     margin-top:4vh; */
+	height: 79vh;
 	display: flex;
 	flex-direction: column;
 	overflow: scroll;
@@ -647,6 +673,10 @@ label[for="more"]:checked ~ input {
 	padding: 0px 1%;
 	box-sizing: border-box;
 	margin: 1%;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: black;
 	/* transition: all ease-in-out 0.1s; */
 }
 /* left content contains the image, index and name of the song */
@@ -664,6 +694,43 @@ label[for="more"]:checked ~ input {
 	width: 50%;
 	word-wrap: break-word;
 }
+/* this will cover the playlist image. this can be called as a container for half of the items in the left part */
+.coverer {
+	width: 80px;
+	height: 80px;
+  position: relative;
+}
+/* playlist item image */
+.playlist-item img {
+	width: 80px;
+	height: 80px;
+  border-radius: 10px;
+}
+.playlist-item .play-button{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+	height: 80px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity ease-in-out 0.1s;
+}
+.playlist-item .play-button i{
+  color: white;
+  margin: auto;
+	font-size: 2vw;
+	opacity: 0;
+	transition: opacity ease-in-out 0.2s;
+}
+.playlist-item .play-button:hover{
+	opacity: 0.6;
+}
+.playlist-item .play-button:hover i{
+	opacity: 1;
+}
 /* right content contains the heart icon */
 .right-content {
 	position: relative;
@@ -676,9 +743,11 @@ label[for="more"]:checked ~ input {
 }
 .right-content i {
 	transition: all ease-in-out 0.1s;
+  color: black;
+  font-weight: bold;
 }
 .right-content i:hover {
-	color: red;
+	color: white;
 }
 /* animation for glowing heart in each of the playlist items */
 @keyframes glowing-heart {
@@ -702,16 +771,8 @@ label[for="more"]:checked ~ input {
 /* playlist items hovering effect */
 .playlist-item:hover {
 	box-shadow: 0px 0px 2px 1px white;
-}
-/* playlist item image */
-.playlist-item img {
-	width: 80px;
-	height: 80px;
-}
-/* this will cover the playlist image. this can be called as a container for half of the items in the left part */
-.coverer {
-	width: 80px;
-	height: 80px;
+  color: white;
+  background-color: var(--dark-color, #0f52ba);
 }
 
 
@@ -724,7 +785,7 @@ footer {
 	bottom: 0px;
 	width: 100%;
 	height: 60px;
-	background-color: #002933;
+	background-color: var(--dark-color, #0f52ba);
   /* background-color: orange; */
 	display: flex;
 	flex-direction: row;

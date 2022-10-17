@@ -2,9 +2,6 @@
   .carousel img:hover {
     transform: translateY(0) !important;
   }
-  .latest-release{
-    top: 20vw;
-  }
 }
 @media screen and (max-width: 980px) {
   .carousel img:nth-child(1) {
@@ -32,6 +29,9 @@
   }
   label[for="more"]{
     display: block;
+  }
+  #more{
+    display: none;
   }
   /* hidden section 2 by default */
 	.section-2 {
@@ -78,4 +78,11 @@
   .extras{
     display: none;
   }
+}
+
+
+
+@media screen and (max-width: 479px) {
+/* start of phone styles */
+
 }
