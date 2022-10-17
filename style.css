@@ -389,7 +389,7 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 	display: flex;
 	flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   overflow-x: scroll;
 }
 .popular-artist-content::-webkit-scrollbar{
@@ -472,7 +472,7 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 	display: flex;
 	flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
 	align-items: center;
   overflow-x: scroll;
   border: 5px solid #0f52ba;
@@ -563,7 +563,7 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 	display: flex;
 	flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
 	align-items: baseline;
   height: auto;
   overflow-x: scroll;
