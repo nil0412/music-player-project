@@ -35,14 +35,13 @@ p {
 .navigation-bar{
   height: 60px;
 	width: auto;
+  /* overflow: hidden; */
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
 	align-items: center;
   box-sizing: border-box;
-  height: auto;
-  width: auto;
   padding: 10px 10px;
   transition: all ease-in-out 1s;
   background-color: var(--dark-color, #0f52ba);
@@ -145,6 +144,7 @@ main{
   height: 100%;
   overflow: scroll;
   overflow-x: hidden;
+  padding-bottom: 10px;
 }
 
 .section-2::-webkit-scrollbar{
@@ -388,6 +388,8 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 .popular-artist-content {
 	display: flex;
 	flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   overflow-x: scroll;
 }
 .popular-artist-content::-webkit-scrollbar{
@@ -469,8 +471,13 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 	align-items: center;
   overflow-x: scroll;
+  border: 5px solid #0f52ba;
+  border-radius: 10px;
+  /* background-color: white; */
 }
 .music-themes::-webkit-scrollbar {
   display: none;
@@ -537,7 +544,6 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 .language {
 	position: relative;
   margin-top: 10px;
-	/* top: 18vw; */
 	height: auto;
 	width: 100%;
 	box-sizing: border-box;
@@ -556,6 +562,8 @@ input[type="checkbox"]:hover ~ .latest-release-dropdown, .latest-release-dropdow
 .language-content {
 	display: flex;
 	flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 	align-items: baseline;
   height: auto;
   overflow-x: scroll;
